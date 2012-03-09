@@ -23,7 +23,7 @@ module FatFreeCRM
     config.autoload_paths += Dir[Rails.root.join("app/models/**")]
 
     # Activate observers that should always be running.
-    config.active_record.observers = :activity_observer unless ARGV.join.include?('assets:precompile')
+    #~ config.active_record.observers = :activity_observer unless ARGV.join.include?('assets:precompile')
 
     # Load development rake tasks (RSpec, Gem packaging, etc.)
     rake_tasks do
