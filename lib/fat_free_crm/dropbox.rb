@@ -392,7 +392,7 @@ module FatFreeCRM
     # Notify users with the results of the operations (feedback from dropbox)
     #--------------------------------------------------------------------------------------
     def notify(email, mediator_links)
-      ack_email = Notifier.create_dropbox_ack_notification(@sender, @settings[:address], email, mediator_links)
+      ack_email = Notifier.create_dropbox_notification(@sender, @settings[:address], email, mediator_links)
       Notifier.deliver(ack_email)
     end
 
